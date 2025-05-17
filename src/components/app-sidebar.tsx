@@ -45,7 +45,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="flex flex-col items-start px-4 py-3">
+      <SidebarHeader className="flex flex-col items-start px-4 py-4">
         <div className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Phone className="h-5 w-5" />

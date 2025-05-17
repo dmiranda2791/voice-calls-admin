@@ -1,9 +1,15 @@
-import { AnalyticsHeader } from "@/components/analytics-header"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CallVolumeScoreChart } from "@/components/call-volume-score-chart"
-import { AverageDurationChart } from "@/components/average-duration-chart"
-import { SeedDatabaseButton } from "@/components/seed-database-button"
-import { MobileHeader } from "@/components/mobile-header"
+import { AnalyticsHeader } from "@/components/analytics-header";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CallVolumeScoreChart } from "@/components/call-volume-score-chart";
+import { AverageDurationChart } from "@/components/average-duration-chart";
+import { SeedDatabaseButton } from "@/components/seed-database-button";
+import { MobileHeader } from "@/components/mobile-header";
 
 export default function AnalyticsPage() {
   return (
@@ -15,18 +21,20 @@ export default function AnalyticsPage() {
           <SeedDatabaseButton />
         </div>
 
-        <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
-          <Card className="col-span-1">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 w-full">
+          <Card className="col-span-1 w-full">
             <CardHeader>
-              <CardTitle>Call Volumes & Evaluation Scores</CardTitle>
-              <CardDescription>Trends over the selected time period</CardDescription>
+              <CardTitle>Call Volumes</CardTitle>
+              <CardDescription>
+                Trends over the selected time period
+              </CardDescription>
             </CardHeader>
             <CardContent className="h-[400px]">
               <CallVolumeScoreChart />
             </CardContent>
           </Card>
 
-          <Card className="col-span-1">
+          <Card className="col-span-1 w-full">
             <CardHeader>
               <CardTitle>Average Call Duration</CardTitle>
               <CardDescription>By agent type and company</CardDescription>
@@ -38,5 +46,5 @@ export default function AnalyticsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
