@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { BarChart3, Phone } from "lucide-react"
-import { usePathname } from "next/navigation"
-import Link from "next/link"
+import { BarChart3, Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 import {
   Sidebar,
@@ -15,10 +15,9 @@ import {
   SidebarSeparator,
   SidebarGroup,
   SidebarGroupContent,
-  useSidebar,
-} from "@/components/ui/sidebar"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/sidebar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,11 +25,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
 export function AppSidebar() {
-  const pathname = usePathname()
-  const { mobileOpen, setMobileOpen } = useSidebar()
+  const pathname = usePathname();
 
   const mainNavItems = [
     {
@@ -43,7 +41,7 @@ export function AppSidebar() {
       href: "/analytics",
       icon: BarChart3,
     },
-  ]
+  ];
 
   return (
     <Sidebar>
@@ -66,7 +64,6 @@ export function AppSidebar() {
                     asChild
                     isActive={pathname === item.href}
                     tooltip={item.title}
-                    onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-3"
                   >
                     <Link href={item.href} className="flex items-center">
@@ -103,5 +100,5 @@ export function AppSidebar() {
         </DropdownMenu>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
