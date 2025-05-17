@@ -4,8 +4,8 @@ import { createClient } from "@supabase/supabase-js"
 
 // Create a Supabase client with the service role key for server-side operations
 export const createServerSupabaseClient = async (): Promise<ReturnType<typeof createClient>> => {
-  const supabaseUrl = process.env.SUPABASE_URL
-  const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseServiceKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
   if (!supabaseUrl || !supabaseServiceKey) {
     console.error("Missing Supabase environment variables:", {
